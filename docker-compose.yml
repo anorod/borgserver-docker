@@ -1,13 +1,13 @@
 services:
-  borg-server:
+  borgserver:
     build:
       context: .
       platforms:
-        - "linux/arm64"
+#        - "linux/arm64"
         - "linux/amd64"
     restart: always
-    image: workleast/borg-server
-    container_name: borg-server
+    image: workleast/borgserver
+    container_name: borgserver
     volumes:
       - ${REPO_DIR}:/backups
       - ${SSH_DIR}:/home/borg/.ssh
