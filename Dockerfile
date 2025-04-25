@@ -1,13 +1,16 @@
-FROM alpine:edge
-LABEL maintainer="workleast.com"
+FROM alpine:3:20
+LABEL maintainer="anorod"
 
 #Install Borg & SSH
 RUN apk add --no-cache \
     tzdata \
-    openssh \
+    openssh~=9.7 \
     sshfs \
-    borgbackup \
-    supervisor
+    borgbackup~=1.2 \
+    supervisor && \
+    rm -rf /var/cache/apk && \
+    rm -rf /var/lib/app/lists*
+
 RUN adduser -D -u 1000 borg && \
     passwd -u borg && \
     mkdir -m 0700 /backups && \
