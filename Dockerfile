@@ -4,9 +4,9 @@ LABEL maintainer="anorod"
 #Install Borg & SSH
 RUN apk add --no-cache \
     tzdata \
-    openssh~=9.7 \
+    openssh \
     sshfs \
-    borgbackup~=1.2 \
+    borgbackup \
     supervisor \ 
     net-tools && \
     rm -rf /var/cache/apk && \
