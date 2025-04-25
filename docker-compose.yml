@@ -15,3 +15,4 @@ services:
       - "2022:22"
     environment:
       TZ: ${TZ}
+      HEALTHCHECK_PATH: ${HEALTHCHECK_PATH}
