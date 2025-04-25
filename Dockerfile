@@ -28,7 +28,7 @@ COPY built-in/supervisord.conf /etc/supervisord.conf
 COPY built-in/service.sh /usr/local/bin/service.sh
 COPY built-in/gen-sshkey.sh /usr/local/bin/gen-sshkey.sh
 COPY built-in/fix-permission.sh /usr/local/bin/fix-permission.sh
-COPY built-in/health-check.sh /usr/local/bin/healt-check.sh
+COPY built-in/health-check.sh /usr/local/bin/health-check.sh
 
 RUN chmod +x /usr/local/bin/service.sh
 RUN chmod +x /usr/local/bin/gen-sshkey.sh
