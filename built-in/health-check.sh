@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Check if the environment variable is set
 if [ -z "$HEALTHCHECK_PATH" ]; then
