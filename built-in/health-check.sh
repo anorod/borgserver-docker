@@ -15,7 +15,7 @@ fi
 
 # Check if ssh is running (basic check)
 if netstat -an | grep :22 > /dev/null; then
-  #echo `date` "Healthcheck OK. SSH service is running." >> /proc/1/fd/1
+  echo `date` "Healthcheck OK. SSH service is running."
 else
   echo `date` "SSH service is not running, restarting container." >> /proc/1/fd/1
   reboot
